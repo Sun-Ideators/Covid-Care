@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="#ff00ffff" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.Toolbar android:theme="?actionBarTheme" android:id="@id/toolbar2" android:background="?colorPrimary" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?actionBarSize" app:title="@string/app_name" />
+    <androidx.cardview.widget.CardView android:id="@id/cardview1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="70.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="10.0dip" android:layout_centerHorizontal="true" app:cardCornerRadius="20.0dip">
+        <ImageView android:layout_gravity="center" android:id="@id/img_i" android:layout_width="50.0dip" android:layout_height="50.0dip" android:layout_margin="10.0dip" android:src="@drawable/ic_bluetooth" android:layout_centerVertical="true" />
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView android:id="@id/cardview" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="10.0dip" android:layout_below="@id/cardview1" app:cardCornerRadius="20.0dip">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="10.0dip">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="25.0sp" android:textStyle="bold" android:textColor="@color/colorPrimaryDark" android:layout_gravity="center" android:id="@id/tv_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="Device Name" android:textAllCaps="true" />
+                <androidx.appcompat.widget.AppCompatCheckBox android:layout_gravity="center" android:id="@id/enable" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="Enable" android:layout_below="@id/tv_name" android:layout_centerHorizontal="true" />
+                <androidx.appcompat.widget.AppCompatCheckBox android:layout_gravity="center" android:id="@id/disable" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="Visibility" android:layout_below="@id/enable" android:layout_centerHorizontal="true" />
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="10.0dip" android:layout_below="@id/cardview" app:cardCornerRadius="20.0dip">
+        <ImageView android:id="@id/nobluetooth" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/noblue" />
+        <ListView android:id="@id/list_blue" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="10.0dip" />
+        <ProgressBar android:layout_gravity="center" android:id="@id/pro" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
